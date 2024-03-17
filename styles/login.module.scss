@@ -1,0 +1,75 @@
+@import './variables.module';
+
+.container {
+    .wrap_container {
+        min-height: 782px;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: linear-gradient(180deg, #FFFFFF 0%, #E5EEFA 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wrap_login_box {
+            max-width: 440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            .wrap_img {
+                max-width: 120px;
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .title {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .desc {
+            color: $grey;
+            text-align: center;
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 43px;
+        }
+    }
+    .input_container {
+        position: relative;
+        .error_msg {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            background: rgba(255,0,51,0.2);
+            color: $red;
+            text-align: center;
+            border-radius: 4px;
+            padding: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+            width: 100%;
+            font-size: 12px;
+            line-height: 14px;
+            &.show {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    
+    .login_btn {
+        margin-top: 20px;
+    }
+    .forgot_pw_info {
+        font-size: 14px;
+        line-height: 20px;
+        color: $grey;
+        margin-top: 40px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,155 @@
+@import "./variables.module";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: $font_color;
+    height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 100%;
+}
+
+.kanit-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kanit-reg {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-med {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semi {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.wrap-input {
+  .col {
+    width: 100%;
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+      border: 1px solid #D9D9D9;
+      font-size: 16px;
+      line-height: 24px;
+      border-radius: 8px;
+      padding: 17.5px 24px;
+      outline: none;
+      &::placeholder {
+        opacity: 0.6;
+      }
+      &:focus {
+        border: 1px solid #00522C;
+      }
+      &.invalid {
+        border: 1px solid $red;
+        color: $red;
+        &::placeholder {
+          color: $red;
+        }
+      }
+    }
+    &.pw {
+      position: relative;
+      .icon-eye {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.6;
+        margin-top: 1px;
+        cursor: pointer;
+        &.eye-close {
+          background-image: url('/images/ic-eye-close.svg');
+        }
+        &.eye-open {
+          background-image: url('/images/ic-eye-open.svg');
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  color: $white;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 8px 30px;
+  text-align: center;
+  cursor: pointer;
+  &[data-color="green"] {
+    background: $light_green;
+    padding: 16px 30px;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: $dark_green;
+    }
+  }
+}
+
+#footer {
+  background-color: $black_grey;
+  width: 100%;
+  padding: 16px 20px;
+  .footer_box {
+    color: $white;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
